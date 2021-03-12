@@ -1,12 +1,19 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-	<p> Welcome to my shop <p>
-  </body>
-</html>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+ 
+<h1> Welcome to my shop </h1>
+<a href ="/about"> About Us </a>
+<br>
+<a href ="/contact"> Contact Us </a>
+<br>
+<h2> Active Promotions. Don't miss out! </h2>
+<table>
+  <td width="20%">
+        <% if (promos.length > 0) {%>
+            <% promos.forEach((recref, index) => { %>
+                <img src="/images/<%= recref.promoimage %>" alt="<%= recref.promotitle %>">
+            <% }); %>
+        <% } %>
+
+
+    </td>
+</table>

@@ -1,8 +1,22 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Tahoma";
 }
 
 a {
   color: #00B7FF;
+}
+
+img {
+	
+  	max-width: 200px;
+	
+	max-height: 250px;
+	margin: 5px;
+	border: 1px solid #ccc;
+	float: left;
+}	
+
+img:hover {
+  border: 1px solid #777;
 }
