@@ -1,0 +1,17 @@
+<h1> Edit Financial Record</h1>
+<form action="/financial/save" method="post">
+	<input type="hidden" name="month_id" value="<%= onerec.month_id %>" >
+<table>
+
+	<tr> <td> Month Name: </td> <td> <input type="text" name="monthname" value="<%= onerec.monthname %>" required> </td> </tr>
+	<tr> <td> Budget: </td> <td> <input type="number" name="budget" value="<%= onerec.monthly_budget %>" required> </td> </tr>
+	<tr> <td> Revenue: </td> <td> <input type="number" name="revenue" value="<%= onerec.monthly_revenue %>" required> </td> </tr>
+	<tr> <td> Supply Expenses: </td> <td> <input type="number" name="supply" value="<%= onerec.supply_expenses %>" required> </td> </tr>
+	<tr> <td> Wage Expenses: </td> <td> <input type="number" name="wages" value="<%= onerec.wage_expenses %>" required> </td> </tr>
+	<tr> <td> Ad Expenses: </td> <td> <input type="number" name="adverts" value="<%= onerec.ad_expenses %>" required> </td> </tr>
+
+
+</table>
+
+<button type="submit">Save</button>
+</form>

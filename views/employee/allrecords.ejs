@@ -1,0 +1,19 @@
+<% if (allrecs.length > 0) {%>
+	<table>
+		<% allrecs.forEach((recref, index) => { %>
+			<tr>
+				<td><%= recref.employee_id %></td>
+				<td><%= recref.firstname%></td>
+				<td><%= recref.lastname %></td>
+				<td><%= recref.position %></td>
+				<td><a href='/employee/<%= recref.employee_id %>/show'>Details</a></td>
+				<td><a href='/employee/<%= recref.employee_id%>/edit'>Edit</a></td>
+				<td><a href='/employee/<%= recref.employee_id %>/delete'onclick="return confirm('Are you sure you want to delete this record?')" >Delete</a></td>
+			</tr>
+		<% }); %>
+		</table>
+		<a href = '/employee/addrecord'>New Record</a>
+
+		<% } else { %>
+		<p>No Records Available</p>
+		<% } %>

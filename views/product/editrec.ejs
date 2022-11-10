@@ -1,0 +1,18 @@
+<h1> Edit Product</h1>
+<form action="/product/save" method="post">
+	<input type="hidden" name="product_id" value="<%= onerec.product_id %>">
+<table>
+
+	<tr> <td> Product Name: </td> <td> <input type="text" name="productname" value="<%= onerec.product_name %>" required> </td> </tr>
+	<tr> <td> Description: </td> <td> <textarea name="description" rows="10" cols="30" value="<%= onerec.product_description %>" required> 
+</textarea> </td> </tr>
+
+	<tr> <td> Quantity: </td> <td> <input type="number" name="productquantity" value="<%= onerec.product_quantity %>" required> </td> </tr>
+	<tr> <td> Price: </td> <td> <input type="number" name="productprice" value="<%= onerec.product_price %>" required> </td> </tr>
+
+
+
+</table>
+
+<button type="submit">Save</button>
+</form>

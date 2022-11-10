@@ -1,0 +1,23 @@
+<h1> Product Details </h1>
+<table>
+
+	<tr> <td> Product ID: </td> <td> <%= onerec.product_id %> </td> </tr>
+	<tr> <td> Product Name: </td> <td> <%= onerec.product_name %> </td> </tr>
+	<tr> <td> Description: </td> <td> <%= onerec.product_description %> </td> </tr>
+	<form action="/catalog/add" method="post" >
+		<input type="hidden" name="product_id" value=<%= onerec.product_id %> >
+		
+		<tr>
+			<td>Price: <%= Intl.NumberFormat('en-US', { style: 'currency',currency: 'USD' }).format(onerec.product_price) %></td>
+		</tr>
+		
+	
+		<tr>
+			<td> Quantity: <input type="number" name="qty" required> </td>
+			<td> <button type="submit">Add to Cart</button></td>
+		</tr>
+
+		
+		
+	</form>
+</table>

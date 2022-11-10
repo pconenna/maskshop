@@ -7,6 +7,9 @@ var layouts = require('express-ejs-layouts');
 const mariadb = require('mariadb/callback');
 const db = mariadb.createConnection({host: 'eagle.cdm.depaul.edu', user: 'pconenna', password: 'pconenna', database: 'maskshop'});
 const session = require('express-session');
+const cart = [];
+session.cart = cart;
+global.cart = cart;
 
 
 // connect to database
@@ -32,10 +35,13 @@ var employeeRouter = require('./routes/employee');
 var productRouter = require('./routes/product');
 var suppliersRouter = require('./routes/suppliers');
 var financialRouter = require('./routes/financial');
+var saleorderRouter = require('./routes/saleorder');
+var orderdetailRouter = require('./routes/orderdetail');
 var saleRouter = require('./routes/sale');
 var searchRouter = require('./routes/search');
 var reportRouter = require('./routes/report');
 var catalogRouter = require('./routes/catalog');
+var testRouter = require('./routes/testpage')
 
 
 var app = express();
@@ -68,10 +74,13 @@ app.use('/product', productRouter);
 app.use('/employee', employeeRouter);
 app.use('/suppliers', suppliersRouter);
 app.use('/financial', financialRouter);
+app.use('/saleorder', saleorderRouter);
+app.use('/orderdetail', orderdetailRouter);
 app.use('/sale', saleRouter);
 app.use('/search', searchRouter);
 app.use('/report', reportRouter);
 app.use('/catalog', catalogRouter);
+app.use('/testpage', testRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

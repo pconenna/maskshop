@@ -1,0 +1,19 @@
+<% if (allrecs.length > 0) {%>
+	<table>
+		<% allrecs.forEach((recref, index) => { %>
+			<tr>
+				<td><%= recref.month_id %></td>
+				<td><%= recref.month_name%></td>
+				<td><%= recref.monthly_budget %></td>
+				<td><%= recref.monthly_revenue %></td>
+				<td><a href='/financial/<%= recref.month_id %>/show'>Details</a></td>
+				<td><a href='/financial/<%= recref.month_id%>/edit'>Edit</a></td>
+				<td><a href='/financial/<%= recref.month_id %>/delete'onclick="return confirm('Are you sure you want to delete this record?')" >Delete</a></td>
+			</tr>
+		<% }); %>
+		</table>
+		<a href = '/financial/addrecord'>New Record</a>
+
+		<% } else { %>
+		<p>No Records Available</p>
+		<% } %>

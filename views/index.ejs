@@ -1,13 +1,12 @@
 <link rel='stylesheet' href='/stylesheets/style.css' />
  
-<h1> Welcome to my shop </h1>
-<a href ="/about"> About Us </a>
-<br>
-<a href ="/contact"> Contact Us </a>
-<br>
-<h2> Active Promotions. Don't miss out! </h2>
 <table>
+    <td> <h2> Browse and Shop </h2><a href="/catalog"><img src="/images/catalogtile.png" >
+    <a href="/product/3/show"><img src="/images/popular.png" ></td> <!-- hard code that for project turn in purposes-->
+
+
   <td width="20%">
+    <h2> Active Promotions. Don't miss out! </h2>
         <% if (promos.length > 0) {%>
             <% promos.forEach((recref, index) => { %>
                 <img src="/images/<%= recref.promoimage %>" alt="<%= recref.promotitle %>">

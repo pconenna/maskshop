@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 14px "Tahoma";
+  font: 14px "Verdana";
 }
 
 a {
@@ -20,3 +20,51 @@ img {
 img:hover {
   border: 1px solid #777;
 }
+
+product{
+	margin: 5px;
+    border: 2px solid #ccc;
+    float: left;
+	  background: #ccffff;
+	  box-shadow: 5px 5px 2px #888888;
+  	min-width: 200px;
+  	max-width: 200px;
+	  min-height: 250px;
+	  max-height: 250px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input[type=number]{
+	width: 80px;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	border: 1px solid #e7e7e7;
+	background-color: #f3f3f3;
+  }
+  
+  li {
+	float: left;
+  }
+  
+  li a {
+	display: block;
+	color: #666;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+	background-color: #ddd;
+  }
+  
+  li a.active {
+	color: white;
+	background-color: #4CAF50;
+  }

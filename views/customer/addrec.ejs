@@ -1,0 +1,20 @@
+<h1> New Customer</h1>
+<form action="/customer" method="post">
+<table>
+
+	<tr> <td> First Name: </td> <td> <input type="text" name="firstname" required> </td> </tr>
+	<tr> <td> Last Name: </td> <td> <input type="text" name="lastname" required> </td> </tr>
+	<tr> <td> Username: </td> <td> <input type="text" name="username" required> </td> </tr>
+	<tr> <td> Password: </td> <td> <input type="password" name="password" required> </td> </tr>
+	<tr> <td> Email: </td> <td> <input type="email" name="email" required> </td> </tr>
+	<tr> <td> Phone: </td> <td> <input type="tel" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required> </td> </tr>
+	<tr> <td> Address Line 1: </td> <td> <input type="text" name="address1" required> </td> </tr>
+	<tr> <td> Address Line 2: </td> <td> <input type="text" name="address2" > </td> </tr>
+	<tr> <td> City: </td> <td> <input type="text" name="city" required> </td> </tr>
+	<tr> <td> State: </td> <td> <input type="text" name="state" required> </td> </tr>
+	<tr> <td> Zip Code: </td> <td> <input type="number" name="zip" required> </td> </tr>
+	<tr> <td> Admin?: </td> <td> <input type="checkbox" name="admin"> </td> </tr>
+</table>
+
+<button type="submit">Save</button>
+</form>
